@@ -80,26 +80,32 @@ class StreetFighter
 
 	@@x = 0
 	@@y = 0
-	
-	def self.move_position(move)
-		case move
-		when "right"
-			(@@y == 5)? @@y = 0 : @@y += 1
-		when "left"
-			(@@y == 0)? @@y = 5 : @@y -= 1
-		when "up"				
-			@@x = 0
-		when "down"
-			@@x = 1
-		else 
-			return "Invalid entry"
-		end
-		return FIGHTERS[@@x][@@y]
+
+	def move_position(moves)
+    scrolled_players = []
+    moves.each do |move|
+      case move
+      when "right"
+        (@@y == 5)? @@y = 0 : @@y += 1
+      when "left"
+        (@@y == 0)? @@y = 5 : @@y -= 1
+      when "up"
+        @@x = 0
+      when "down"
+        @@x = 1
+      else
+        return "Invalid entry"
+      end
+      scrolled_players << FIGHTERS[@@x][@@y]
+    end
+
+		return scrolled_players
 	end
-	
-	
+
 end
 
+
+=begin
 puts "Enter the move"
 puts "Enter up/down/right/left\nEnter exit to exit program"
 
@@ -113,3 +119,4 @@ while move != "exit"
 	puts "Enter the move"
 	move = gets.chomp
 end
+=end

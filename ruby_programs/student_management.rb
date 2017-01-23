@@ -41,7 +41,8 @@ class Student
 
 end
 
-100.times do 
+
+100.times do
 	roll_number = Faker::Number.between(1000,1200)
 	name = Faker::Name.first_name
 	department = ["CSE", "ISE", "ECE", "EEE"].sample
@@ -51,14 +52,16 @@ end
 	student.add_to_list
 end
 
-puts "Enter the year to get Student details"
+puts "Enter the year to get Student details(2010 - 2016)"
 year = gets.to_i
 student_details = Student.find_details_by_year(year)
+puts "Name - Roll number"
+puts "-" * 20
 student_details.each do |student|
-	puts student.details
+	puts "#{student.name} - #{student.roll_number}"
 end
 
-puts "Enter the roll number to find the student"
+puts "\n\nEnter the roll number to find the student"
 roll_number = gets.to_i
 student_detail = Student.find_student_by_roll_number(roll_number)
 puts student_detail.details
