@@ -1,4 +1,4 @@
-require "./../ruby_programs/pagination_helper"
+require "pagination_helper"
 
 describe PaginationHelper do
   

@@ -1,4 +1,4 @@
-require "./../ruby_programs/gender"
+require "gender"
 
 describe GenderAPI do
   let(:name) { GenderAPI.new }

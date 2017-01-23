@@ -1,4 +1,4 @@
-require "./../ruby_programs/anagrams"
+require "anagrams"
 
 describe Anagrams do
   it "expect anagram to match" do

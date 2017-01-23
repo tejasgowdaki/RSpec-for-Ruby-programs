@@ -1,4 +1,4 @@
-require "./../ruby_programs/rot13"
+require "rot13"
 
 describe Rot13 do
   let(:string) { Rot13.new }

@@ -1,4 +1,4 @@
-require "./../ruby_programs/scramble"
+require "scramble"
 
 describe Scramble do
   let(:words) {Scramble.new}
