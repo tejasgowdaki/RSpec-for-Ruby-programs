@@ -64,7 +64,7 @@ class BestTravel
 
 end
 
-
+=begin
 max_distance = 174
 max_cities = 3
 list_of_distances = [50, 55, 57, 58, 60]
@@ -73,3 +73,4 @@ output = BestTravel.new
 puts output.distance_travelled(max_distance, max_cities, list_of_distances)
 puts output.cities_visited(max_distance, max_cities, list_of_distances).to_s
 #choose_best_route(max_distance, max_cities, list_of_distances)
+=end

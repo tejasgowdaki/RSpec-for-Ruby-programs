@@ -13,7 +13,8 @@ class Anagrams
 
 end
 
-
+=begin
 anagram_array = Anagrams.new
 
 puts "Anagram array - #{anagram_array.anagram('abba', ['abba', 'abcd', 'bbaa', 'dada'])}"
+=end

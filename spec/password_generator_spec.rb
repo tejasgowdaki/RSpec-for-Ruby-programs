@@ -1,4 +1,4 @@
-require "./../ruby_programs/password_generator"
+require "password_generator"
 
 describe PasswordGenerator do
 

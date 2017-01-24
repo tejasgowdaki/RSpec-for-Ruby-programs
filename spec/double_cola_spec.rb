@@ -1,4 +1,4 @@
-require "./../ruby_programs/double_cola"
+require "double_cola"
 
 describe DoubleCola do
   let(:name) { DoubleCola.new }
