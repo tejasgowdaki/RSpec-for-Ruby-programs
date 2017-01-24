@@ -9,7 +9,7 @@ Write a method to print the data of a student whose roll number is given
 
 require 'faker'
 
-class Student
+class StudentManagement
 
 	attr_accessor :roll_number, :name, :department, :course, :year_of_joining
 
@@ -31,7 +31,7 @@ class Student
 		@@students.find_all {|student| student.year_of_joining == year}
 	end
 
-	def self.find_student_by_roll_number(number)
+	def find_student_by_roll_number(number)
 		@@students.find {|student| student.roll_number == number}
 	end
 
@@ -41,20 +41,20 @@ class Student
 
 end
 
-
-100.times do
+20.times do
 	roll_number = Faker::Number.between(1000,1200)
 	name = Faker::Name.first_name
 	department = ["CSE", "ISE", "ECE", "EEE"].sample
 	course = ["BE", "BSC", "BCA"].sample
-	year_of_joining = Faker::Number.between(2010,2016)
-	student = Student.new(roll_number, name, department, course, year_of_joining)
-	student.add_to_list
+	year_of_joining = Faker::Number.between(2014,2016)
+	@student = StudentManagement.new(roll_number, name, department, course, year_of_joining)
+	@student.add_to_list
 end
 
-puts "Enter the year to get Student details(2010 - 2016)"
+=begin
+puts "Enter the year to get StudentManagement details(2010 - 2016)"
 year = gets.to_i
-student_details = Student.find_details_by_year(year)
+student_details = StudentManagement.find_details_by_year(year)
 puts "Name - Roll number"
 puts "-" * 20
 student_details.each do |student|
@@ -63,7 +63,7 @@ end
 
 puts "\n\nEnter the roll number to find the student"
 roll_number = gets.to_i
-student_detail = Student.find_student_by_roll_number(roll_number)
+student_detail = StudentManagement.find_student_by_roll_number(roll_number)
 puts student_detail.details
 
-
+=end
