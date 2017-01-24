@@ -1,4 +1,4 @@
-require './../ruby_programs/best_travel'
+require 'best_travel'
 
 describe BestTravel do
   let(:best_travel) { BestTravel.new }

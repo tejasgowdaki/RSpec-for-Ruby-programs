@@ -1,4 +1,4 @@
-require "./../ruby_programs/street_fighter"
+require "street_fighter"
 
 describe StreetFighter do
   let(:fighters) { StreetFighter.new }
